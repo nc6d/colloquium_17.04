@@ -4,10 +4,15 @@ import numpy as np
 
 arr = [np.random.randint(-10, 10) for x in range(10)]
 print('Default array:\n', arr)
-c = 0
+index = 0
 new_arr = []
+minimal = max(arr)
 for i in range(len(arr)):
-    if i != 0:
-        new_arr.append(arr[i])
-    i = c
-print(f"First index element: {arr[0]}[{c}]", '\nArray without 1st element:\n', new_arr, "\nNew array's average value is", sum(new_arr)/len(arr))
+    if arr[i] < minimal:
+        minimal = arr[i]
+        index = i
+for j in range(len(arr)):
+    if j > index:
+        new_arr.append(arr[j])
+
+print("New array:\n", new_arr, f"\n First minimal element: {minimal}[{index}]", "Average value of new array:", sum(new_arr)/ len(arr))
