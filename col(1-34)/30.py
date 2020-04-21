@@ -15,4 +15,6 @@ for j in range(len(arr)):
     if j > index:
         new_arr.append(arr[j])
 
-print("New array:\n", new_arr, f"\nFirst minimal element: {minimal}[{index}]", "\nAverage value of new array:", sum(new_arr) / len(arr))
+print("New array:\n", new_arr,
+      f"\nFirst minimal element: {minimal}[{index}]",
+      "\nAverage value of new array:", sum(new_arr) / len(new_arr))
