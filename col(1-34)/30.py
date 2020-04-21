@@ -9,4 +9,4 @@ new_arr = []
 for i in range(len(arr)):
     if i != 0:
         new_arr.append(arr[i])
-print('Array without 1st element:\n', new_arr, "\nNew array's average value is", sum(new_arr)/len(arr))
+print("First index element:", arr[0], '\nArray without 1st element:\n', new_arr, "\nNew array's average value is", sum(new_arr)/len(arr))
